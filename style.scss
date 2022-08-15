@@ -1,3 +1,10 @@
+@import url("https://use.typekit.net/zan7vxv.css");
+
+$brown: #2E0927;
+$red: #FF2D00;
+$orange:#FF8C00;
+$green: #04756F;
+
 html {
     box-sizing: border-box;
 }
@@ -5,6 +12,15 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h2 {
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 section {
@@ -12,4 +28,8 @@ section {
     flex-direction: column;
     width: 100%;
     height: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: $green;
 }
