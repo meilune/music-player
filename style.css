@@ -94,7 +94,7 @@ section .container .progress-container .progress {
   border-radius: 5px;
   height: 100%;
   /* change this to show progress */
-  width: 66%;
+  width: 0%;
   -webkit-transition: width 0.1s linear;
   transition: width 0.1s linear;
 }

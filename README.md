@@ -1,6 +1,6 @@
 # music-player
 
-Creating a music player with full functionality.
+Creating a custom made music player with full functionality.
 
 Artwork from Freepiks (licencesed);
 Music from Last.fm royalty free choices:

@@ -1,9 +1,10 @@
 const image = document.querySelector("img");
 const title = document.getElementById("title");
 const artist = document.getElementById("artist");
+const progressContainer = document.getElementById("progress-container");
 const progressBar = document.getElementById("progress");
-const currentTime = document.getElementById("current-time");
-const durationTime = document.getElementById("duration");
+const currentTimeEl = document.getElementById("current-time");
+const durationTimeEl = document.getElementById("duration");
 const previousSong = document.getElementById("prev");
 const playSong = document.getElementById("play");
 const pauseSong = document.getElementById("pause");
@@ -62,15 +63,16 @@ function togglePlay() {
     isPlaying ? pauseMusic() : playMusic();
 };
 
+//Event listeners for play/pause of songs
 playSong.addEventListener("click", togglePlay);
 pauseSong.addEventListener("click", togglePlay);
 
 //Update the DOM
 function loadSong(song) {
-title.textContent = song.title;
-artist.textContent = song.artist;
-musicSound.src = song.src;
-image.src = song.image;
+    title.textContent = song.title;
+    artist.textContent = song.artist;
+    musicSound.src = song.src;
+    image.src = song.image;
 }
 
 //Current Song
@@ -99,8 +101,38 @@ function playPrev() {
 //on load select first song
 loadSong(music[songIndex]);
 
-//Event Listeners to the previous and next buttons
+//Update Progress Bar and time
+function updateProgressBar(e) {
+    if(isPlaying) {
+        const { duration, currentTime } = e.srcElement;
+        const progressPercent = (currentTime / duration) * 100;
+        progress.style.width = `${progressPercent}%`;
+        //Calculate the display for the duration
+        let durationMinutes = Math.floor(duration / 60);
+        let durationSeconds = Math.floor(duration % 60);
+        if(durationSeconds < 10) {
+            durationSeconds = `0${durationSeconds}`
+        }
+        //Delay switching the Element to avoid NaN
+        if(durationSeconds) {
+            durationTimeEl.textContent = `${durationMinutes}:${durationSeconds}`;
+        }
+        //Calculate the display for the current time stamp
+        let currentMinutes = Math.floor(currentTime / 60);
+        let currentSeconds = Math.floor(currentTime % 60);
+        if(currentSeconds < 10) {
+            currentSeconds = `0${currentSeconds}`
+        }
+        //Delay switching the Element to avoid NaN
+        if(currentSeconds) {
+            currentTimeEl.textContent = `${currentMinutes}:${currentSeconds}`;
+        }
+    }
+}
 
+//Event Listeners to the previous and next buttons
 previousSong.addEventListener("click", playPrev);
 nextSong.addEventListener("click", playNext);
 
+//Event listener for the progress bar
+musicSound.addEventListener("timeupdate", updateProgressBar)
