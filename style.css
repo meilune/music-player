@@ -10,13 +10,14 @@ body {
   font-weight: 500;
   font-style: normal;
   background-color: #04756F;
+  color: #2E0927;
 }
 
 h2 {
   font-family: all-round-gothic, sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 0;
 }
 
@@ -24,8 +25,10 @@ h3 {
   font-family: all-round-gothic, sans-serif;
   font-weight: 500;
   font-style: normal;
+  line-height: 12px;
 }
 
+/*Section dedicated to music player*/
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +46,7 @@ section {
   width: 100%;
   height: 100%;
   text-align: center;
+  /*Music player*/
 }
 
 section .container {
@@ -53,12 +57,16 @@ section .container {
   border-radius: 30px;
   -webkit-box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.4);
+  /*Image container*/
+  /* Progress */
+  /*Controls*/
 }
 
 section .container .image-container {
   width: 300px;
   height: 300px;
   margin: auto;
+  margin-top: -2rem;
 }
 
 section .container .image-container img {
@@ -68,10 +76,59 @@ section .container .image-container img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 30px;
-  -webkit-box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.3);
 }
 
+section .container .progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+section .container .progress-container .progress {
+  background: #2E0927;
+  border-radius: 5px;
+  height: 100%;
+  /* change this to show progress */
+  width: 66%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+}
+
+section .container .progress-container .duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .container .player-controls {
+  position: relative;
+  top: -1rem;
+  cursor: pointer;
+}
+
+section .container .player-controls .fas {
+  font-size: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+section .container .player-controls .main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/*Mobile responsive styling*/
 @media only screen and (max-width: 800px) {
   h2 {
     font-size: 38px;

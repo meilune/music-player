@@ -18,10 +18,22 @@
                 <img src="art/art-1.jpg" alt="Art">
             </div>
             <!-- Music title -->
-            <h2 id="title">Tiger Girl</h2>
-            <h3 id="artist">65daysofstatic</h3>
-            <!-- Audio controller -->
-            <audio controls src="music/65daysofstatic - Tiger Girl.mp3" type="audio/mp3"></audio>
+            <h2 id="title">Warm Eyelids</h2>
+            <h3 id="artist">Motorama</h3>
+            <!-- Progress -->
+            <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+                <div class="duration-wrapper">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">4:34</span>
+                </div>
+            </div>
+            <!-- Controls -->
+            <div class="player-controls">
+                <i class="fas fa-backward" id="prev" title="Previous"></i>
+                <i class="fas fa-play main-button" id="play" title="Play"></i>
+                <i class="fas fa-forward" id="next" title="Next"></i>
+            </div>
         </div>
     </section>
     <script type="text/javascript" src="app.js"></script>
