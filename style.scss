@@ -1,5 +1,3 @@
-@import url("https://use.typekit.net/zan7vxv.css");
-
 $brown: #2E0927;
 $red: #FF2D00;
 $orange:#FF8C00;
@@ -15,21 +13,67 @@ body {
     font-family: all-round-gothic, sans-serif;
     font-weight: 500;
     font-style: normal;
+    background-color: $green;
 }
 
 h2 {
     font-family: all-round-gothic, sans-serif;
     font-weight: 600;
     font-style: normal;
+    font-size: 48px;
+    line-height: 0;
+}
+
+h3 {
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
+    text-align: center;
+    .container {
+        position: relative;
+        width: 600px;
+        height: 500px;
+        background-color: $orange;
+        border-radius: 30px;
+        box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.4);
+        .image-container {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            img {
+                margin-top: -2rem;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 30px;
+                box-shadow: 0 5px 30px 3px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
 }
 
-audio::-webkit-media-controls-panel {
-    background-color: $green;
+@media only screen and (max-width: 800px){
+    h2 {
+        font-size: 38px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    section {
+        .container {
+            width:95vw;
+            .image-container {
+                width:65vw;
+            }
+        }
+    }
 }

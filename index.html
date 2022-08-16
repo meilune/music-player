@@ -4,15 +4,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8c25178190.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/zan7vxv.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>LULU Music Player</title>
     <link rel="icon" type="image/x-icon" href="music.png"/>
 </head>
 <body> 
     <section>
-        <div class="container">
-            <img src="art/art-1.jpg" alt="">
-            <h2>Tiger Girl</h2>
+        <!-- Music player container -->
+        <div class="container"> 
+            <!-- image container -->
+            <div class="image-container">
+                <img src="art/art-1.jpg" alt="Art">
+            </div>
+            <!-- Music title -->
+            <h2 id="title">Tiger Girl</h2>
+            <h3 id="artist">65daysofstatic</h3>
+            <!-- Audio controller -->
             <audio controls src="music/65daysofstatic - Tiger Girl.mp3" type="audio/mp3"></audio>
         </div>
     </section>
