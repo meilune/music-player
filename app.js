@@ -15,26 +15,26 @@ const music = [
     {
         title: "Warm Eyelids",
         artist: "Motorama",
-        src: "music/music-1.mp3",
-        image: "art/art-1.jpg"
+        src: "https://meilune.github.io/music-player/music/music-1.mp3",
+        image: "https://meilune.github.io/music-player/art/art-1.jpg"
     },
     {
         title: "Sol",
         artist: "Nils Frahm",
-        src: "music/music-2.mp3",
-        image: "art/art-2.jpg"
+        src: "https://meilune.github.io/music-player/music/music-2.mp3",
+        image: "https://meilune.github.io/music-player/art/art-2.jpg"
     },
     {
         title: "It's Dark, It's Cold, It's Winter",
         artist: "Sleepmakeswaves",
-        src: "music/music-3.mp3",
-        image: "art/art-3.jpg"
+        src: "https://meilune.github.io/music-player/music/music-3.mp3",
+        image: "https://meilune.github.io/music-player/art/art-3.jpg"
     },
     {
         title: "Fireflies",
         artist: "Still Corners",
-        src: "music/music-4.mp3",
-        image: "art/art-4.jpg"
+        src: "https://meilune.github.io/music-player/music/music-4.mp3",
+        image: "https://meilune.github.io/music-player/art/art-4.jpg"
     }
 ]
 //Audio function

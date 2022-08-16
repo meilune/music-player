@@ -2,7 +2,7 @@
 
 Creating a custom made music player with full functionality.
 
-Artwork from Freepiks (licencesed);
+Artwork from Freepiks (licensed);
 Music from Last.fm royalty free choices:
 title: "Warm Eyelids", artist: "Motorama";
 title: "Sol", artist: "Nils Frahm";
