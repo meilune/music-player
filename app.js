@@ -130,9 +130,19 @@ function updateProgressBar(e) {
     }
 }
 
+//Set Progress bar
+function setProgressBar(e){
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const { duration } = musicSound;
+    musicSound.currentTime = (clickX / width) * duration;
+}
+
 //Event Listeners to the previous and next buttons
 previousSong.addEventListener("click", playPrev);
 nextSong.addEventListener("click", playNext);
+musicSound.addEventListener("ended", playNext);
 
 //Event listener for the progress bar
-musicSound.addEventListener("timeupdate", updateProgressBar)
+musicSound.addEventListener("timeupdate", updateProgressBar);
+progressContainer.addEventListener("click", setProgressBar);

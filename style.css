@@ -51,8 +51,8 @@ section {
 
 section .container {
   position: relative;
-  width: 600px;
-  padding-bottom: 2rem;
+  width: 450px;
+  padding: 0 1rem 1rem 1rem;
   background-color: #FF8C00;
   border-radius: 30px;
   -webkit-box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.4);
