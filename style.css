@@ -99,6 +99,10 @@ section .container .progress-container .progress {
   transition: width 0.1s linear;
 }
 
+section .container .progress-container .progress:hover {
+  background: #FF2D00;
+}
+
 section .container .progress-container .duration-wrapper {
   position: relative;
   top: -25px;
@@ -113,19 +117,27 @@ section .container .progress-container .duration-wrapper {
 section .container .player-controls {
   position: relative;
   top: -1rem;
-  cursor: pointer;
 }
 
 section .container .player-controls .fas {
   font-size: 30px;
   margin-right: 15px;
   margin-left: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 section .container .player-controls .main-button {
   font-size: 40px;
   position: relative;
   top: 3px;
+}
+
+section .container .player-controls .fas:hover {
+  color: #FF2D00;
 }
 
 /*Mobile responsive styling*/

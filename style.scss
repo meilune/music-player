@@ -80,7 +80,9 @@ section {
                 width: 66%;
                 transition: width 0.1s linear;
             }
-            
+            .progress:hover {
+                background: $red;
+            }
             .duration-wrapper {
                 position: relative;
                 top: -25px;
@@ -92,17 +94,22 @@ section {
         .player-controls {
             position: relative;
             top: -1rem;
-            cursor: pointer;
             .fas {
                 font-size: 30px;
                 margin-right:15px;
                 margin-left: 15px;
-              }
-              .main-button {
+                cursor: pointer;
+                user-select: none;
+            }
+            .main-button {
                 font-size: 40px;
                 position: relative;
                 top: 3px;
-              }
+            }
+            .fas:hover {
+                color: $red;
+            }
+            
         }
 
     }
